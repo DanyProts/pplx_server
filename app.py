@@ -2,8 +2,13 @@ from typing import Optional, Any, Dict
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
-from .config import settings
-from .perplexity import PerplexityClient
+# Support running as a package or as a plain module in the same folder
+try:  # when executed as package: uvicorn server_pplx.app:app
+    from .config import settings
+    from .perplexity import PerplexityClient
+except Exception:  # when executed as script/module from folder: uvicorn app:app
+    from config import settings
+    from perplexity import PerplexityClient
 
 
 app = FastAPI(title="Perplexity Proxy Server", version="1.0.0")

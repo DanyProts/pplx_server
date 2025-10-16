@@ -1,7 +1,11 @@
 from typing import Any, Dict, Optional
 import httpx
 
-from .config import settings
+# Support running as a package or as a plain module in the same folder
+try:  # package import
+    from .config import settings
+except Exception:  # local module import
+    from config import settings
 
 
 class PerplexityClient:
