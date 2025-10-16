@@ -1,0 +1,41 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments (if created locally)
+.venv/
+venv/
+ENV/
+env/
+
+# Environment files (secrets)
+.env
+.env.*
+
+# Test/coverage caches
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.mypy_cache/
+.pytype/
+.pyre/
+
+# Logs
+*.log
+logs/
+log/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
